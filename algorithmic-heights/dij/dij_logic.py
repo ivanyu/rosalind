@@ -32,6 +32,7 @@ def dijkstra(graph, s):
         visited[curr_n] = True
     return dist
 
+
 if __name__ == "__main__":
     import unittest
 
@@ -45,7 +46,7 @@ if __name__ == "__main__":
             self.assertSequenceEqual(dijkstra(graph, 0), [0])
 
         def test_line(self):
-            graph=[
+            graph = [
                 [0, 1, 0, 0],
                 [0, 0, 2, 0],
                 [0, 0, 0, 3],
@@ -61,7 +62,7 @@ if __name__ == "__main__":
             self.assertSequenceEqual(dijkstra(graph, 0), model)
 
         def test_first_isolated(self):
-            graph=[
+            graph = [
                 [0, 0, 0, 0],
                 [1, 0, 0, 0],
                 [1, 0, 0, 0],
